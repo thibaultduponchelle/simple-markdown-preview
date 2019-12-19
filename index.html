@@ -12,8 +12,44 @@
   </head>
 
   <body>
-    <textarea id="markdown" style="width:100%;"></textarea>
-    <div id="preview"></div>
+    <textarea id="markdown" style="width:100%; height: 50%;"></textarea>
+    <div id="preview"># Simple Preview Markdown Editor
+## Second level title
+### Third level
+	    
+Very simple markdown preview based on [Markdown-It](https://github.com/markdown-it/markdown-it)
+
+### Some markdown below
+**bold**
+
+*italic*
+
+~~strikethrough~~
+
+* List item
+* Again
+* And again
+
+[Perl](http://www.perl.org/)
+
+> This is a quote
+	    
+`print "Inline code\n";`
+
+```
+print "Multiline code\n";
+print "Multiline code\n";
+print "Multiline code\n";
+```
+
+| Pos         | Club        | Points      | 
+|:------------|:-----------:|:-----------:| 
+|      1      | OM          | 12          |   
+|      2      | St Etienne  | 9           |    
+|      3      | OGC Nice    | 3           | 
+
+---
+    </div>
     
     <script>
       var ta = document.getElementById("markdown");
