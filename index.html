@@ -1,11 +1,22 @@
 <html>
   <head>
     <title>Simple markdown preview</title>
+    <script src="js/markdown-it.js"></script>
+    <script>
+      var parser = window.markdownit(); 
+      function convert(str) {
+       return parser.render(str);
+		  }
+    </script>
   </head>
+
   <body>
-  
-  <textarea style="width:90%;">
-  </textarea>
-  
+    <textarea id="markdown" style="width:90%;"></textarea>
+    <div id="preview"></div>
+    
+    <script>
+      var ta = document.getElementById("markdown");
+      ta.onchange = function(){ document.getElementById('preview').innerHTML = convert(ta.value); }; 
+    </script>
   </body>
 </html>
