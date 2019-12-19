@@ -7,7 +7,7 @@
       var parser = window.markdownit(); 
       function convert(str) {
        return parser.render(str);
-		  }
+      }
     </script>
   </head>
 
@@ -17,6 +17,7 @@
 ### Third level
 	    
 Very simple markdown preview based on [Markdown-It](https://github.com/markdown-it/markdown-it)
+It is basically a simple version of [Sample Markdown-It editor](https://markdown-it.github.io)
 
 ### Some markdown below
 **bold**
@@ -53,7 +54,9 @@ print "Multiline code\n";
     
     <script>
       var ta = document.getElementById("markdown");
-      ta.oninput = function(){ document.getElementById('preview').innerHTML = convert(ta.value); }; 
+      var generate_preview = function(){ document.getElementById('preview').innerHTML = convert(ta.value); };
+      ta.oninput =  generate_preview;
+      generate_preview(); // We need to run it one time when the page is loaded because we have some sample markdown in the textarea
     </script>
   </body>
 </html>
