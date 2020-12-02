@@ -1,3 +1,5 @@
-# Simple markdown preview
+# WaWaWa
 
-See [live demo](https://thibaultduponchelle.github.io/wawawa/simple-markdown-preview/)
+* [Simple markdown preview](https://thibaultduponchelle.github.io/wawawa/simple-markdown-preview/)
+* [pmtrx](https://thibaultduponchelle.github.io/wawawa/pmtrx/)
+
