@@ -1,0 +1,34 @@
+<!doctype html>
+<head>
+<title>Set cookie</title>
+</head>
+<body>
+<script type="text/JavaScript">
+function setCookie(name, value) {
+    var d = new Date();
+    d.setTime(d.getTime() + (10*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    var domain  = "domain="+"thibaultduponchelle.github.io";
+    document.cookie = name + "=" + value + "; " + expires + ";" + domain;
+    location.reload();
+}
+
+function deleteCookie() {
+    var domain  = "domain="+"github.io";
+    document.cookie = "color=unknown; expires=Sat, 20 Jan 1980 12:00:00 UTC;" + domain;
+    location.reload();
+}
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+</script>
+
+<h1>Cookie color: <script>document.write(getCookie("color"));</script></h1>
+<button onclick="setCookie('color', 'blue')">Set BLUE</button>
+<button onclick="setCookie('color', 'green')">Set GREEN</button>
+<button onclick="deleteCookie()">Delete Cookie</button>
+</body>
+</html>
